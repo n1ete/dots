@@ -1,0 +1,34 @@
+set completion-query-items 250
+set completion-ignore-case on
+set completion-map-case on
+set mark-symlinked-directories on
+set show-all-if-ambiguous on
+
+# mappings for Ctrl-left-arrow and Ctrl-right-arrow for word moving
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
+
+#Home / End Keys
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+"\e[7~": beginning-of-line
+"\e[8~": end-of-line
+"\eOH": beginning-of-line
+"\eOF": end-of-line
+"\e[H": beginning-of-line
+"\e[F": end-of-line
+
+#If something is typed, search when using up/down arrow keys
+"\e[A":history-search-backward
+"\e[B":history-search-forward
+
+#work better with UTF-8
+set input-meta on
+set output-meta on
+
+#Macro: alt+S: prefix line with sudo
+"\es":"\C-asudo \C-e"
